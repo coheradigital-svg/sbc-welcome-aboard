@@ -728,3 +728,11 @@ body { background: #050b17; }
 .fl-fd--i label { font-size: 0.875rem; }
 @media (min-width: 64rem) { .fl-seat-slide img { object-position: 50% 30%; } }
 @media (max-width: 63.99rem) { .fl-cue { display: none !important; } }
+
+/* scenes re-shot in the newer cabin: where each picture's subject sits */
+.fl-tray .fl-bleed img { object-position: 20% 30%; }
+@media (min-width: 64rem) { .fl-final-media { inset: 0 0 0 30%; } .fl-final-media img { object-position: 50% 25%; } }
+@media (max-width: 63.99rem) { .fl-final-media img { object-position: 55% 20%; } .fl-tray .fl-bleed img { object-position: 22% 20%; } }
+
+/* phone: each date gets a full row, so the whole date is readable */
+@media (max-width: 47.99rem) { .fl-f-route .fl-fd--i { grid-column: 1 / -1; } }
