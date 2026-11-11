@@ -1,0 +1,373 @@
+<!doctype html>
+<!-- data-claim: none | 40 | 50 | 30-50. The savings line. See assets/sbc.js, section 1. Also works as ?claim=40 in the address. -->
+<html lang="en-AU" data-claim="none">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome aboard | Simply Business Class</title>
+<meta name="description" content="International business class on the major airlines, on fares you won't find by searching. Tell us the trip and an advisor comes back within 24 hours. Since 2013.">
+<meta name="robots" content="noindex, nofollow"><!-- demonstration build: remove before launch -->
+<meta name="theme-color" content="#050b17">
+<link rel="icon" href="assets/logo-globe.png">
+<link rel="preload" as="image" href="assets/img/hero.jpg" media="(min-width: 48rem)">
+<link rel="preload" as="image" href="assets/img/hero-m.jpg" media="(max-width: 47.99rem)">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/flight.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#main" aria-label="Simply Business Class">
+      <img class="globe" src="assets/logo-globe-white.png" width="160" height="142" alt="">
+      <img class="words" src="assets/logo-words-white.png" width="360" height="182" alt="Simply Business Class">
+    </a>
+    <div class="top-right">
+      <a class="top-phone" href="tel:1800133997"><span>Australia</span> 1800 133 997</a>
+      <button class="btn" type="button" data-quote>Get a quote</button>
+    </div>
+  </div>
+</header>
+
+<!-- The flight tracker: one line for the whole page, the small aircraft moves as you scroll -->
+<div class="fl-track" aria-hidden="true">
+  <span class="fl-track-phase">Boarding</span>
+  <span class="fl-track-line"><i class="fl-track-fill"></i>
+    <svg class="fl-track-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 12c0 .8-.7 1.5-1.5 1.5h-5.2l-4.6 7H8.1l2.3-7H5.6l-1.7 2.2H2.3l1-3.7-1-3.7h1.6l1.7 2.2h4.8l-2.3-7h2.1l4.6 7H20c.8 0 1.5.7 1.5 1.5z"/></svg>
+  </span>
+  <span class="fl-track-time">to landing</span>
+</div>
+
+<main id="main">
+
+<!-- 1. BOARDING. She speaks first. -->
+<section class="fl-hero" data-phase="Boarding" aria-labelledby="h-hero">
+  <div class="fl-hero-media">
+    <picture>
+      <source media="(max-width: 47.99rem)" srcset="assets/img/hero-m.jpg" width="1290" height="2293">
+      <img src="assets/img/hero.jpg" width="2560" height="1429" alt="A flight attendant in a navy uniform smiles and shows you to a business class suite: a cream leather seat, a pillow, a glass of champagne by the window." fetchpriority="high">
+    </picture>
+    <video class="fl-live" muted playsinline loop preload="none" data-live="assets/video/hero.mp4" aria-hidden="true"></video>
+  </div>
+  <div class="fl-hero-shade" aria-hidden="true"></div>
+  <div class="fl-glow" aria-hidden="true"></div>
+
+  <div class="wrap fl-hero-in">
+    <div class="fl-hero-a">
+      <h1 id="h-hero" class="say">&ldquo;Welcome aboard. This is your business class seat.&rdquo;</h1>
+      <p class="lead">The same seat the airline sells on its own website. <span class="claim">On a fare you won't find by searching.</span></p>
+      <div class="fl-form fl-form--glass" data-form="h"></div>
+      <p class="fl-hero-go"><button class="btn btn--big" type="button" data-quote>Get my free quote
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></p>
+      <ul class="fl-facts">
+        <li>Since 2013</li>
+        <li>IATA accredited</li>
+        <li>Now booking through 2027</li>
+      </ul>
+    </div>
+  </div>
+  <a class="fl-cue" href="#air"><span>Take your seat</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+</section>
+
+<!-- 2. A DRINK BEFORE TAKE-OFF. -->
+<section class="fl-tray" data-phase="Doors closed" aria-labelledby="h-tray">
+  <div class="fl-bleed" data-drift>
+    <img src="assets/img/tray.jpg" width="2400" height="1339" loading="lazy" decoding="async" alt="Seen from the seat: the flight attendant leans in from the aisle with two glasses of champagne on a small tray.">
+  </div>
+  <div class="fl-tray-shade" aria-hidden="true"></div>
+  <div class="wrap fl-tray-in">
+    <p class="say say--2" data-rise>&ldquo;Champagne now, or after take-off?&rdquo;</p>
+    <h2 id="h-tray" data-rise>You used to just get through this part.</h2>
+    <p class="lead" data-rise>Australia to Europe is the better part of a day in the air. In this seat it is a dinner, a film and a night's sleep.</p>
+  </div>
+</section>
+
+<!-- 3. IN THE AIR. How the fare works. Source: simplybusinessclass.com/about-us -->
+<section class="fl-air" id="air" data-phase="Climbing" aria-labelledby="h-air">
+  <div class="fl-air-media">
+    <img src="assets/img/plane-poster.jpg" width="1920" height="1080" loading="lazy" decoding="async" alt="A white long-haul aircraft above a sea of clouds at dusk, its cabin windows lit.">
+    <video class="fl-live" muted playsinline loop preload="none" data-live="assets/video/plane.mp4" aria-hidden="true"></video>
+    <div class="fl-pins" aria-hidden="true">
+      <span class="fl-pin fl-pin--a" data-rise><i></i><b>Seat 4A</b>found the fare online</span>
+      <span class="fl-pin fl-pin--k" data-rise><i></i><b>Seat 4K</b>asked an advisor</span>
+    </div>
+  </div>
+  <div class="wrap fl-air-in">
+    <h2 id="h-air" data-rise>Same aircraft.<br>Same cabin.<br>Same seat.</h2>
+    <p class="lead" data-rise>Two passengers in the same row. One searched online, the other asked us. They eat the same dinner and sleep in the same bed. They did not pay the same fare.</p>
+    <div class="fl-air-why" data-rise>
+      <h3>The fare you see online is one fare. There are others.</h3>
+      <p>When you search, you see the price the airline or the booking site has chosen to publish. Our advisors work with dozens of booking partners and several consolidators, and through them reach thousands of special fares on the major airlines.</p>
+      <p class="claim-body">How much less depends on your route, your dates and how far ahead you ask.</p>
+    </div>
+    <p data-rise><button class="btn" type="button" data-quote>See what yours would be</button></p>
+  </div>
+</section>
+
+<!-- 4. THE SEAT, THREE TIMES. A gallery you swipe, drag or click: native scroll with snap points, nothing tied to the page scroll.
+     Facts: simplybusinessclass.com home, "Flying Business Class" (priority boarding, lounges, checked bags, drinks and food, lay-flat seats) -->
+<section class="fl-seat" data-phase="Cruising" aria-labelledby="h-seat">
+  <div class="wrap fl-seat-head">
+    <h2 id="h-seat" data-rise>One seat. Three rooms.</h2>
+    <p class="lead" data-rise>Swipe through the flight, or pick the hour.</p>
+  </div>
+  <div class="fl-rail fl-seat-rail" tabindex="0" aria-label="The seat at three moments of the flight, scroll sideways">
+    <article class="fl-seat-slide">
+      <img src="assets/img/seat-1.jpg" width="2400" height="1350" loading="lazy" decoding="async" draggable="false" alt="A business class suite at dusk: a cream leather seat in a white shell, a pillow, the seat belt, headphones on their hook, a glass of champagne on the console.">
+      <div class="fl-seat-cap">
+        <p class="fl-hour">Hour one</p>
+        <p class="say say--2">&ldquo;This one is all yours. May I take your jacket?&rdquo;</p>
+        <h3>First it is an armchair.</h3>
+        <p>Priority boarding, a lounge before the flight and checked bags come with the ticket. So does an armrest you share with nobody.</p>
+      </div>
+    </article>
+    <article class="fl-seat-slide">
+      <img src="assets/img/seat-2.jpg" width="2400" height="1350" loading="lazy" decoding="async" draggable="false" alt="The same suite at dinner: the tray table out over the seat with a white cloth, a plated main course, bread and a glass of wine.">
+      <div class="fl-seat-cap">
+        <p class="fl-hour">Hour three</p>
+        <p class="say say--2">&ldquo;Dinner is served. Would you like to see the wine list?&rdquo;</p>
+        <h3>Then it is a table for dinner.</h3>
+        <p>Proper food and drinks on a table laid for you, with room left over for your book.</p>
+      </div>
+    </article>
+    <article class="fl-seat-slide">
+      <img src="assets/img/seat-3.jpg" width="2400" height="1350" loading="lazy" decoding="async" draggable="false" alt="The same suite at night: the seat is now a flat bed with a duvet and a pillow, the cabin dimmed, stars in the windows.">
+      <div class="fl-seat-cap">
+        <p class="fl-hour">Hour five</p>
+        <p class="say say--2">&ldquo;I've made up your bed. Sleep well.&rdquo;</p>
+        <h3>Then it is a bed.</h3>
+        <p>The seat goes fully flat. You sleep through the long dark part of the flight and wake up near Europe.</p>
+      </div>
+    </article>
+  </div>
+  <div class="fl-seat-ctl">
+    <div class="fl-tabs" role="group" aria-label="Show the seat as">
+      <button type="button" class="is-on" aria-pressed="true">Armchair</button>
+      <button type="button" aria-pressed="false">Dinner</button>
+      <button type="button" aria-pressed="false">Bed</button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHAT IS ON YOUR TABLE. The things nobody gets when they book it themselves. Sources: /about-us, /how-it-works -->
+<section class="fl-table" data-phase="Over the ocean" aria-labelledby="h-table">
+  <div class="wrap">
+    <div class="fl-table-head">
+      <h2 id="h-table" data-rise>Six things on your table that a booking site never puts there.</h2>
+      <p class="lead" data-rise>Book it yourself and you get a confirmation email. Ask us and these come with the ticket.</p>
+    </div>
+    <div class="fl-table-grid">
+      <figure class="fl-table-fig">
+        <img src="assets/img/table.jpg" width="2000" height="1125" loading="lazy" decoding="async" alt="Six objects on a dark walnut table under a reading lamp: a phone, a boarding pass, a watch, a folded route map, a card wallet and a fountain pen.">
+        <span class="fl-spot" aria-hidden="true"></span>
+        <span class="fl-ring" aria-hidden="true"></span>
+      </figure>
+      <ol class="fl-rail fl-things" tabindex="0" aria-label="Six things that come with the ticket">
+        <li data-x="23" data-y="31"><span class="fl-obj">The phone</span><h3>A person who picks up</h3><p>Your advisor is there before, during and after booking. When something comes up you already know who to call: <a href="tel:1800133997">1800 133 997</a>.</p></li>
+        <li data-x="54.5" data-y="31"><span class="fl-obj">The boarding pass</span><h3>Fares that are never published</h3><p>Dozens of booking partners and several consolidators give our advisors thousands of special fares on the major airlines.</p></li>
+        <li data-x="81" data-y="31"><span class="fl-obj">The watch</span><h3>An answer within 24 hours</h3><p>Send the trip today. An advisor comes back by phone or email with your options. The quote is free and the form asks for no payment details.</p></li>
+        <li data-x="22" data-y="69"><span class="fl-obj">The map</span><h3>A route drawn around your trip</h3><p>Round trip, one way or multi-city. Fly into one city and home from another if that suits the cruise. Stop-overs are welcome.</p></li>
+        <li data-x="53.5" data-y="70"><span class="fl-obj">The wallet</span><h3>Nothing extra for how you pay</h3><p>Visa, Mastercard, American Express or bank transfer. We add no charge for any of them.</p></li>
+        <li data-x="80" data-y="69"><span class="fl-obj">The pen</span><h3>Changes without the queue</h3><p>If plans change, you call your advisor and we deal with the airline. They tell you what a change would cost when they find you the flight.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MORNING. -->
+<section class="fl-morning" data-phase="Descent" aria-labelledby="h-morning">
+  <div class="fl-bleed" data-drift>
+    <img src="assets/img/sunrise.jpg" width="2400" height="1350" loading="lazy" decoding="async" alt="Sunrise through the aircraft window: the wingtip above pink clouds, a cup of coffee on the ledge.">
+  </div>
+  <div class="fl-morning-shade" aria-hidden="true"></div>
+  <div class="wrap fl-morning-in">
+    <p class="say say--2" data-rise>&ldquo;Good morning. We land in forty minutes.&rdquo;</p>
+    <h2 id="h-morning" data-rise>You slept. That was the whole idea.</h2>
+    <p class="lead" data-rise>You walk off the aircraft ready for the first day of the trip.</p>
+  </div>
+</section>
+
+<!-- 7. LANDED. Who it is for. Audience per SBC: travellers planning a big trip well ahead, many of them joining a cruise. -->
+<section class="fl-quay" data-phase="Landed" aria-labelledby="h-quay">
+  <div class="wrap fl-split">
+    <div class="fl-split-copy">
+      <h2 id="h-quay" data-rise>You may recognise the trip.</h2>
+      <div class="fl-scenes">
+        <p data-rise>The cruise leaves Southampton in September next year. The cabin was booked months ago. <span>The flights are the part you keep meaning to sort out.</span></p>
+        <p data-rise>You have done the long haul in economy more times than you can count. <span>This time you would like to get off the plane ready for the first day.</span></p>
+        <p data-rise>It is the big one. The anniversary, the grandchildren in London, the trip you have talked about for years. <span>You want it to start well.</span></p>
+      </div>
+      <p data-rise><button class="btn" type="button" data-quote data-note="A trip planned well ahead">Tell us about yours</button></p>
+    </div>
+    <figure class="fl-porthole" data-rise>
+      <img src="assets/img/quay.jpg" width="2000" height="1125" loading="lazy" decoding="async" alt="Early morning in a Mediterranean harbour: a couple with small suitcases walk along the quay towards a white cruise ship." data-drift>
+    </figure>
+  </div>
+</section>
+
+<!-- 8. HOW IT WORKS. Source: simplybusinessclass.com/how-it-works (3 steps, "within 24 hours") and /about-us ("before, during and after booking") -->
+<section class="fl-steps" aria-labelledby="h-steps">
+  <div class="wrap fl-split fl-split--flip">
+    <figure class="fl-porthole fl-porthole--wide" data-rise>
+      <img src="assets/img/lounge.jpg" width="2000" height="1125" loading="lazy" decoding="async" alt="A quiet corner of an airport lounge at dusk: a leather armchair, an espresso, an aircraft at the gate outside." data-drift>
+    </figure>
+    <div class="fl-split-copy">
+      <h2 id="h-steps" data-rise>Before any of that: three steps. Then one more.</h2>
+      <ol class="fl-steplist">
+        <li data-rise><b>Today</b><h3>You send the trip</h3><p>Where from, where to, when and how many. That is the whole form.</p></li>
+        <li data-rise><b>Within 24 hours</b><h3>An advisor contacts you</h3><p>By phone or email, to go over the trip and understand what you are looking for.</p></li>
+        <li data-rise><b>When you are ready</b><h3>You choose and book</h3><p>Pick the option that fits you best. Your advisor takes you through a simple booking.</p></li>
+        <li data-rise><b>Before, during and after</b><h3>They stay your contact</h3><p>If plans change, you call your advisor. They deal with the airline.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 9. ON YOUR SCREEN. The approved "How it works" video inside a seat-back screen. -->
+<section class="fl-screen" aria-labelledby="h-screen">
+  <div class="fl-screen-bg" aria-hidden="true"></div>
+  <div class="wrap fl-screen-in">
+    <h2 id="h-screen" data-rise>On your screen tonight: how it works.</h2>
+    <div class="fl-bezel" data-rise>
+      <div class="pod-video" data-video>
+        <video data-src="assets/sbc-how-it-works.mp4" preload="none" playsinline aria-label="How Simply Business Class works, 59 seconds"></video>
+        <img class="poster" src="assets/video-poster.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async">
+        <button class="pv-start" type="button" aria-label="Play the video: how it works, 59 seconds, with sound">
+          <span class="pv-start-in">
+            <span class="pv-disc"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
+            <span class="pv-label">How it works<span>59 seconds, with sound</span></span>
+          </span>
+        </button>
+        <div class="pv-bar">
+          <button class="pv-btn pv-play" type="button" aria-label="Play">
+            <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4.5" width="4.5" height="15" rx="1"/><rect x="13.5" y="4.5" width="4.5" height="15" rx="1"/></svg>
+          </button>
+          <input class="pv-seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Position in the video">
+          <span class="pv-time" aria-hidden="true">0:00 / 0:59</span>
+          <button class="pv-btn pv-mute" type="button" aria-label="Turn sound off">
+            <svg class="i-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+            <svg class="i-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z" fill="currentColor"/><path d="m16 9.5 5 5M21 9.5l-5 5"/></svg>
+          </button>
+          <button class="pv-btn pv-full" type="button" aria-label="Full screen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. REVIEWS. Ten verified Google reviews, extracted by _система/reviews.py from the live simplybusinessclass.com pages
+     (home slider and /reviews) on 11 Nov 2026: reviewer name, star rating and full text exactly as displayed there.
+     The site shows a rotating selection, so re-run the script before launch to keep the page 1:1 with what is online. -->
+<section class="fl-notes" aria-labelledby="h-rev">
+  <div class="wrap fl-notes-head">
+    <h2 id="h-rev" data-rise>What clients wrote after they flew.</h2>
+    <p class="lead" data-rise>We ask every client for a review after they book, and again when they are home. These are verified Google reviews, shown exactly as they appear on simplybusinessclass.com, with the rating each client gave.</p>
+  </div>
+  <div class="fl-notes-rail" tabindex="0" aria-label="Client reviews, scroll sideways">
+    <div class="fl-notes-track">
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;We've booked with Vitally of Simply Business Class twice now on return flights from Sydney, Australia to London, UK. We couldn't be happier with the service and will certainly return to them n the future for further flights. He couldn't have been more helpful.&rdquo;</blockquote><figcaption><b>Alison Finch</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Vitaly has provided the best service I have ever experienced with a Travel Agent. He has been ultra responsive even though I am in Australia. Nothing had been too much trouble and he has been flexible with regard to changing flights. Would definitely use Simply Business again.&rdquo;</blockquote><figcaption><b>Kathy Prosser</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Been using SBC for business class flights for years. Fares are usually much better than retail, and always had great service from my agent, Vitaliy. You should definitely try SBC before booking flights online or with a travel agent.&rdquo;</blockquote><figcaption><b>graeme taylor</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Great customer service. Not a pushy agent, just one that stays in touch and follows your requests. Will use SimplyBusinessClass next time I travel!! Thanks Again Ms. Oksana&rdquo;</blockquote><figcaption><b>James Babin</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;We found Vitaliy extremely helpful, he worked with our dates for flights very well , and achieved the best price, very friendly, replied to any queries we had very promptly, certainly will use next time we fly international. Thank you Simply business class&rdquo;</blockquote><figcaption><b>David Knight</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Honestly surprised that all flights went so smoothly in view of the discount&rdquo;</blockquote><figcaption><b>Peter Richards</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Worked with Vitaliy for our tickets to Italy. He was very responsive even on the weekend. Our trip went smoothly. Would use them again.&rdquo;</blockquote><figcaption><b>Xue Atherton</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Always a pleasure to book through SBC not only getting a great deal but also Vitaliy (the consultant) is very helpful :)&rdquo;</blockquote><figcaption><b>Suryati Lo</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Vitaliy helped us with excellent business class tickets to Portugal. Very easy to work with.&rdquo;</blockquote><figcaption><b>Nathan McQueen</b>Verified Google review</figcaption></figure>
+      <figure class="fl-note"><span class="fl-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><blockquote>&ldquo;Vitaliy and SBC has provided my family most professional and friendly service, worth recommending.&rdquo;</blockquote><figcaption><b>Edin Mahic</b>Verified Google review</figcaption></figure>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="fl-fine"><a class="textlink" href="https://www.google.com/search?q=simply+business+class#lrd=0x808f77cd771db299:0xfdf7851c7625c0ac,1,,," rel="noopener" target="_blank">Read all our reviews on Google</a>. More, including the critical ones: <a class="textlink" href="https://www.shopperapproved.com/reviews/simplybusinessclass.com" rel="noopener" target="_blank">Shopper Approved</a> and the <a class="textlink" href="https://www.bbb.org/us/ca/san-francisco/profile/travel-agency/simply-business-class-1116-529634" rel="noopener" target="_blank">Better Business Bureau</a>.</p>
+  </div>
+</section>
+
+<!-- 11. TRUST. Sources: /about-us (2013, San Francisco, payment), /contact-us (address, hours), footer (CST 2114402-40, IATA and BBB links), /how-it-works -->
+<section class="fl-trust" aria-labelledby="h-trust">
+  <div class="wrap">
+    <div class="fl-trust-head">
+      <h2 id="h-trust" data-rise>Who you are dealing with.</h2>
+      <p class="lead" data-rise>Check us before you send anything. Everything below is public and easy to verify.</p>
+    </div>
+    <dl class="fl-ledger">
+      <div data-rise><dt>Trading since 2013</dt><dd>We began as a small travel agency in San Francisco and have specialised in international business class airfare ever since.</dd></div>
+      <div data-rise><dt>Accredited</dt><dd>IATA accredited (<a href="https://store.iata.org/ieccacfree" rel="noopener" target="_blank">check an agency code with IATA</a>). Listed with the <a href="https://www.bbb.org/us/ca/san-francisco/profile/travel-agency/simply-business-class-1116-529634" rel="noopener" target="_blank">Better Business Bureau</a>. California Seller of Travel no. 2114402-40.</dd></div>
+      <div data-rise><dt>A real address</dt><dd>236 West Portal Ave, San Francisco, CA 94127, USA. Our agents and support team are based in the United States.</dd></div>
+      <div data-rise><dt>An Australian line</dt><dd><a href="tel:1800133997">1800 133 997</a>, Tuesday to Saturday, 6am to 5pm AEDT.</dd></div>
+      <div data-rise><dt>How you pay</dt><dd>Visa, Mastercard, American Express or bank transfer. Whichever you choose, we do not charge you anything extra.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 12. QUESTIONS -->
+<section class="fl-faq" aria-labelledby="h-faq">
+  <div class="wrap fl-faq-in">
+    <div class="fl-faq-head">
+      <h2 id="h-faq" data-rise>Fair questions.</h2>
+      <p class="lead" data-rise>The ones people ask before they send a request. If yours is not here, call 1800 133 997.</p>
+    </div>
+    <div class="fl-faq-list" data-rise>
+      <details><summary>Are these real tickets on real airlines?<i aria-hidden="true"></i></summary><div class="a"><p>Yes. We book all major airlines, and you fly in the airline's own business class cabin. Your advisor tells you the airline and the flights for every option before you book.</p></div></details>
+      <details><summary>Why is it less than the airline's website?<i aria-hidden="true"></i></summary><div class="a"><p>The airline's website shows its published fare. Our advisors also work with dozens of booking partners and several consolidators, which gives them thousands of special fares that are not listed publicly.</p></div></details>
+      <details><summary>Is the quote really free?<i aria-hidden="true"></i></summary><div class="a"><p>Yes. Sending a request costs nothing and commits you to nothing. The form does not ask for payment details.</p></div></details>
+      <details><summary>How far ahead should I ask?<i aria-hidden="true"></i></summary><div class="a"><p>As early as you like. We are booking through 2027 now. If you are joining a cruise or a tour, send the request once you know the dates.</p></div></details>
+      <details><summary>What if I need to change or cancel?<i aria-hidden="true"></i></summary><div class="a"><p>You call your advisor and we handle it with the airline. Change and cancellation fees are set by the airline or the booking partner. Your advisor tells you what a change would cost when they find you the flight, so you know before you book.</p></div></details>
+      <details><summary>How do I pay?<i aria-hidden="true"></i></summary><div class="a"><p>By Visa, Mastercard, American Express or bank transfer. We do not charge anything extra for any of them.</p></div></details>
+      <details><summary>Will someone pressure me to book?<i aria-hidden="true"></i></summary><div class="a"><p>No. Your advisor finds the options and explains them, and the decision is yours. One client described it in a Google review as &ldquo;Not a pushy agent, just one that stays in touch and follows your requests.&rdquo;</p></div></details>
+      <details><summary>Do you book domestic or short flights?<i aria-hidden="true"></i></summary><div class="a"><p>No. We book international flights of six hours or more.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 13. YOUR BOARDING PASS. The whole quote form, every CRM field visible, laid out as a boarding pass. -->
+<section class="fl-final finale" id="quote" aria-labelledby="h-fin">
+  <div class="fl-final-media">
+    <img src="assets/img/pass.jpg" width="2400" height="1339" loading="lazy" decoding="async" alt="The flight attendant holds out a blank boarding pass towards you and smiles.">
+  </div>
+  <div class="fl-final-shade" aria-hidden="true"></div>
+  <div class="wrap fl-final-in">
+    <div class="fl-final-copy">
+      <h2 id="h-fin" class="say" data-rise>&ldquo;Shall I hold this seat for you?&rdquo;</h2>
+      <p class="lead" data-rise>Write the trip on the pass. An advisor comes back within 24 hours with business class options and the fare for each.</p>
+    </div>
+    <div class="fl-form fl-form--pass" data-form="p" data-rise>
+      <p class="fl-pass-top"><span>Boarding pass</span><span>Free quote</span></p>
+    </div>
+    <ol class="fl-after" data-rise>
+      <li><b>Today</b><span>You send the trip. It takes a couple of minutes.</span></li>
+      <li><b>Within 24 hours</b><span>An advisor contacts you by phone or email to go over it.</span></li>
+      <li><b>After that</b><span>You look at the options and the fares. Book when you are ready, or not at all.</span></li>
+    </ol>
+    <p class="fl-call" data-rise>Prefer to talk? Call <a href="tel:1800133997">1800 133 997</a>, Tuesday to Saturday, 6am to 5pm AEDT.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div><img class="words" src="assets/logo-words-white.png" width="360" height="182" alt="Simply Business Class" loading="lazy">
+        <p>International business class airfare since 2013.</p></div>
+      <div><b>Contact</b>Australia <a href="tel:1800133997">1800 133 997</a><br>USA <a href="tel:+18553595949">+1 855 359 5949</a><br>236 West Portal Ave, San Francisco, CA 94127</div>
+      <div><b>More</b><a href="https://simplybusinessclass.com/privacy-policy/" rel="noopener">Privacy Policy</a><br><a href="https://simplybusinessclass.com/reviews/" rel="noopener">Reviews</a><br><a href="https://simplybusinessclass.com/about-us/" rel="noopener">About us</a></div>
+    </div>
+    <p class="foot-legal">&copy; SimplyBusinessClass.com. All rights reserved. CST 2114402-40.</p>
+  </div>
+</footer>
+
+<div class="dock"><button class="btn btn--block" type="button" data-quote>Get my free quote</button></div>
+
+<noscript><p class="noscript">To request a quote, call 1800 133 997 (Australia) or +1 855 359 5949 (USA).</p></noscript>
+
+<!-- No libraries. The page scrolls with the device's own momentum; nothing takes over the scroll. -->
+<script src="assets/countries.js"></script>
+<script src="assets/sbc.js" defer></script>
+<script src="assets/flight.js" defer></script>
+</body>
+</html>
